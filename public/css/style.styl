@@ -1,0 +1,50 @@
+//  nib from express app
+@import('nib');
+
+
+//  load opensans from google fonts (maybe the overused font in the world)
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:300,600,600');
+
+
+
+//  some useful vars (maybe colors or units...)
+_containerwidth = 350px
+
+
+
+
+//  damn purecss font-spacing!
+*
+  letter-spacing 0em
+  font-family 'Open Sans', sans-serif
+  font-weight 400
+
+html,
+body
+  text-align center
+
+  .container
+    width _containerwidth
+    margin 0 auto
+    text-align left
+
+  form
+    &#choose-data
+      width 100%
+      text-align center
+      input,
+      select
+        margin 10px auto
+        display block
+
+  ul
+    &#searchresults
+      li
+        list-style-type none
+        border-bottom 1px solid rgba(#999, 0.25)
+        h3
+          margin-bottom 5px
+          margin-top 5px
+        pre
+          font-weight 600
+          font-size 13px

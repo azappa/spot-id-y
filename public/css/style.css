@@ -1,0 +1,9 @@
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:300,600,600");
+*{letter-spacing:0;font-family:'Open Sans',sans-serif;font-weight:400}
+html,body{text-align:center;}
+html .container,body .container{width:350px;margin:0 auto;text-align:left}
+html form#choose-data,body form#choose-data{width:100%;text-align:center;}
+html form#choose-data input,body form#choose-data input,html form#choose-data select,body form#choose-data select{margin:10px auto;display:block}
+html ul#searchresults li,body ul#searchresults li{list-style-type:none;border-bottom:1px solid rgba(153,153,153,0.25);}
+html ul#searchresults li h3,body ul#searchresults li h3{margin-bottom:5px;margin-top:5px}
+html ul#searchresults li pre,body ul#searchresults li pre{font-weight:600;font-size:13px}
