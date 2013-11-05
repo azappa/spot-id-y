@@ -1,5 +1,5 @@
 /* jshint indent:2, white:true, laxcomma:true, undef:true, strict:true, unused:true, eqnull:true */
-/* globals window, document, _ */
+/* globals window, document, _, reqwest, alert */
 
 window.addEventListener('DOMContentLoaded', function () {
 
@@ -13,6 +13,14 @@ window.addEventListener('DOMContentLoaded', function () {
     ajaxform(this);
     return false;
   });
+
+
+
+  function testing() {
+    document.querySelector('#choose-data #what').value = 'track';
+    document.querySelector('#choose-data #query').value = 'MIYAVI';
+  }
+  testing();
 
 
   function ajaxform(form) {
@@ -36,11 +44,12 @@ window.addEventListener('DOMContentLoaded', function () {
           var resultscontainer = document.getElementById('searchresults')
             , typeres = type + 's'
             , bluesky = resp[typeres]
-            , listresults = "<% _.each(bluesky, function (s) { %> <li><h3><%= s.name %></h3><pre><%= s.href %></pre></li> <% }); %>"
+            , listresults = "<% _.each(bluesky, function (s) { %> <li><h2><%= s.name %></h2><input type='text' class='code-to-copy' value='<%= s.href %>' spellcheck='false' /></li> <% }); %>"
             , _template = _.template(listresults, bluesky)
             ;
 
           resultscontainer.innerHTML = _template;
+          addResultListeners();
 
           if (bluesky.length === 0) {
             resultscontainer.innerHTML = '<li><pre>0 results</pre></li>';
@@ -57,6 +66,14 @@ window.addEventListener('DOMContentLoaded', function () {
     }
 
 
+  }
+
+  function addResultListeners() {
+    _.each(document.querySelectorAll('.code-to-copy'), function (code) {
+      code.addEventListener('click', function () {
+        this.select();
+      });
+    });
   }
 
 });

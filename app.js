@@ -32,8 +32,14 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 app.use(express.favicon());
 app.use(express.logger('dev'));
+/*
+// old method using Connect // comment for remove console logs warnings about deprecate functions
 app.use(express.bodyParser());
+*/
+app.use(express.json());
+app.use(express.urlencoded());
 app.use(express.methodOverride());
+
 app.use(express.cookieParser('your secret here'));
 app.use(express.session());
 app.use(app.router);

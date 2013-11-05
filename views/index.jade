@@ -5,35 +5,34 @@ block content
 
   .pure-g-r
     
-    .pure-u-1-4 &nbsp;
-    
-    .pure-u-2-4
-      form#choose-data.pure-form.pure-form-stacked
-        fieldset
-          legend
-            | Searching shitify ids
-          label(for='what') Search type
-          select#what(name='what')
-            option(value='') Choose me!
-            option(value='artist') Artist
-            option(value='album') Album
-            option(value='track') Track
-          label(for='query') Query
-          input#query(type='text', name='query', placeholder='eg: MIYAVI')
-          br
-          button.pure-button.pure-button-primary(type='submit')
-            | Search
+    #logo.pure-u-1-5.tc
+      .add-me-padding
+        .circle
 
-    .pure-u-1-4 &nbsp;
+    #chooser.pure-u-1-5
+      .add-me-padding
+        form#choose-data.pure-form.pure-form-stacked.tc
+          fieldset
+            .pure-control-group
+              label(for='what') Search type
+              select#what(name='what')
+                option(value='') Choose me!
+                option(value='artist') Artist
+                option(value='album') Album
+                option(value='track') Track
+            .pure-control-group
+              label(for='query') Query
+              input#query(type='text', name='query', placeholder='eg: MIYAVI')
+            .pure-controls
+              button.pure-button.pure-button-primary(type='submit')
+                | Search
+        div.tc
+          small
+            | Click the ID and copy'n'paste
 
-
-  .pure-g-r
-    .pure-u-1-6 &nbsp;
-    .pure-u-4-6
-      ul#searchresults
-    .pure-u-1-6 &nbsp;
-
-
+    #resulter.pure-u-3-5
+      .add-me-padding
+        ul#searchresults
 
 block scripts
   script(src='/js/main.js')

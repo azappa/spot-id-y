@@ -8,10 +8,17 @@
 
 
 //  some useful vars (maybe colors or units...)
-_containerwidth = 350px
+_darkgreen = #16a085
+_logowh = 100px
 
+//  useful classes
+.tc
+  text-align center
 
-
+//  rewrite some purecss classes
+.pure-button
+  &.pure-button-primary
+    background _darkgreen
 
 //  damn purecss font-spacing!
 *
@@ -19,32 +26,56 @@ _containerwidth = 350px
   font-family 'Open Sans', sans-serif
   font-weight 400
 
-html,
 body
-  text-align center
-
   .container
-    width _containerwidth
-    margin 0 auto
-    text-align left
+    width 100%
+
+  .add-me-padding
+    padding 10px
+
+  #logo
+    text-align center
+    .circle
+      width _logowh
+      height _logowh
+      border-radius (_logowh / 2)
+      background _darkgreen
+      margin (_logowh / 4) auto
 
   form
     &#choose-data
       width 100%
-      text-align center
-      input,
-      select
-        margin 10px auto
-        display block
+      fieldset
+        text-align center
+        .pure-control-group
+          margin-bottom 20px
+        input,
+        select
+          margin auto
+          &:focus
+            border-color _darkgreen
 
   ul
     &#searchresults
+      max-height 100%
+      padding 0
       li
         list-style-type none
-        border-bottom 1px solid rgba(#999, 0.25)
-        h3
+        margin-bottom 30px
+        clearfix()
+        h2
           margin-bottom 5px
           margin-top 5px
-        pre
-          font-weight 600
+          white-space no-wrap
+          text-overflow ellipsis
+          overflow hidden
+          color _darkgreen
+        input[type='text'].code-to-copy
           font-size 13px
+          display block
+          border none
+          width 100%
+          font-weight 400
+          font-family monospace
+          outline none!important
+          background none

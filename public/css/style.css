@@ -1,9 +1,19 @@
 @import url("http://fonts.googleapis.com/css?family=Open+Sans:300,600,600");
+.tc{text-align:center}
+.pure-button.pure-button-primary{background:#16a085}
 *{letter-spacing:0;font-family:'Open Sans',sans-serif;font-weight:400}
-html,body{text-align:center;}
-html .container,body .container{width:350px;margin:0 auto;text-align:left}
-html form#choose-data,body form#choose-data{width:100%;text-align:center;}
-html form#choose-data input,body form#choose-data input,html form#choose-data select,body form#choose-data select{margin:10px auto;display:block}
-html ul#searchresults li,body ul#searchresults li{list-style-type:none;border-bottom:1px solid rgba(153,153,153,0.25);}
-html ul#searchresults li h3,body ul#searchresults li h3{margin-bottom:5px;margin-top:5px}
-html ul#searchresults li pre,body ul#searchresults li pre{font-weight:600;font-size:13px}
+body .container{width:100%}
+body .add-me-padding{padding:10px}
+body #logo{text-align:center;}
+body #logo .circle{width:100px;height:100px;-webkit-border-radius:50px;border-radius:50px;background:#16a085;margin:25px auto}
+body form#choose-data{width:100%;}
+body form#choose-data fieldset{text-align:center;}
+body form#choose-data fieldset .pure-control-group{margin-bottom:20px}
+body form#choose-data fieldset input,body form#choose-data fieldset select{margin:auto;}
+body form#choose-data fieldset input:focus,body form#choose-data fieldset select:focus{border-color:#16a085}
+body ul#searchresults{max-height:100%;padding:0;}
+body ul#searchresults li{list-style-type:none;margin-bottom:30px;zoom:1;}
+body ul#searchresults li:before,body ul#searchresults li:after{content:"";display:table}
+body ul#searchresults li:after{clear:both}
+body ul#searchresults li h2{margin-bottom:5px;margin-top:5px;white-space:nowrap;-o-text-overflow:ellipsis;text-overflow:ellipsis;overflow:hidden;color:#16a085}
+body ul#searchresults li input[type='text'].code-to-copy{font-size:13px;display:block;border:none;width:100%;font-weight:400;font-family:monospace;outline:none !important;background:none}
