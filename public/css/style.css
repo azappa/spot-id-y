@@ -1,11 +1,18 @@
 @import url("http://fonts.googleapis.com/css?family=Open+Sans:300,600,600");
+@font-face{font-family:'icomoon';src:url("../fonts/icomoon.eot");src:url("../fonts/icomoon.eot?#iefix") format('embedded-opentype'),url("../fonts/icomoon.ttf") format('truetype'),url("../fonts/icomoon.woff") format('woff'),url("../fonts/icomoon.svg#icomoon") format('svg');font-weight:normal;font-style:normal}
+[class*="icon-"]{font-family:'icomoon';speak:none;font-style:normal;font-weight:normal;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+.icon-zelda:before{content:"\e600"}
+.icon-kiwi:before{content:"\e601"}
 .tc{text-align:center}
 .pure-button.pure-button-primary{background:#16a085}
 *{letter-spacing:0;font-family:'Open Sans',sans-serif;font-weight:400}
 body .container{width:100%}
 body .add-me-padding{padding:10px}
 body #logo{text-align:center;}
-body #logo .circle{width:100px;height:100px;-webkit-border-radius:50px;border-radius:50px;background:#16a085;margin:25px auto}
+body #logo .circle{width:100px;height:100px;-webkit-border-radius:50px;border-radius:50px;background:#16a085;margin:25px auto;color:#fff;overflow:hidden;}
+body #logo .circle .icon-kiwi{line-height:100px;font-size:32px}
+body #chooser div small{display:block;text-align:center}
+body #chooser div.zelda{margin-top:30px;color:#888}
 body form#choose-data{width:100%;}
 body form#choose-data fieldset{text-align:center;}
 body form#choose-data fieldset .pure-control-group{margin-bottom:20px}

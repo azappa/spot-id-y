@@ -7,6 +7,42 @@
 
 
 
+//  custom icomoon!
+@font-face {
+  font-family: 'icomoon';
+  src:url('../fonts/icomoon.eot');
+  src:url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf') format('truetype'),
+    url('../fonts/icomoon.woff') format('woff'),
+    url('../fonts/icomoon.svg#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class*="icon-"] {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-zelda:before {
+  content: "\e600";
+}
+.icon-kiwi:before {
+  content: "\e601";
+}
+
+
+
+
 //  some useful vars (maybe colors or units...)
 _darkgreen = #16a085
 _logowh = 100px
@@ -41,6 +77,20 @@ body
       border-radius (_logowh / 2)
       background _darkgreen
       margin (_logowh / 4) auto
+      color #fff
+      overflow hidden
+      .icon-kiwi
+        line-height 100px
+        font-size 32px
+
+  #chooser
+    div
+      small
+        display block
+        text-align center
+      &.zelda
+        margin-top 30px
+        color #888
 
   form
     &#choose-data
