@@ -15,12 +15,16 @@ window.addEventListener('DOMContentLoaded', function () {
   });
 
 
-
   function testing() {
     document.querySelector('#choose-data #what').value = 'track';
     document.querySelector('#choose-data #query').value = 'MIYAVI';
   }
-  testing();
+  /*
+    uncomment this and you do not have
+    to insert datas again again again and again
+    when refreshing page for testing
+  */
+  //  testing();
 
 
   function ajaxform(form) {
@@ -37,7 +41,7 @@ window.addEventListener('DOMContentLoaded', function () {
       , type: 'json'
       , data: { _t: type, _q: query }
       , success: function (resp) {
-          console.log(resp);
+          //console.log(resp);
 
           _.templateSettings.variable = 'bluesky';
 
@@ -57,7 +61,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
         }
       , error: function (err) {
-          console.log(err);
+          //console.log(err);
         }
       });
 
