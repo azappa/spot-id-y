@@ -66,7 +66,7 @@ window.addEventListener('DOMContentLoaded', function () {
       });
 
     } else {
-      alert('Yo Mr. White, did you forgot anything??!');
+      alert('Yo Mr. White, did you forget anything??!');
     }
 
 
